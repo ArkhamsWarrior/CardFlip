@@ -1,0 +1,252 @@
+body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.contain {
+  position: relative;
+  width: 10vh;
+  height: 10vh;
+  border: 10px;
+}
+
+.contain .lang-card {
+  position: absolute;
+  width: 10vh;
+  height: 10vh;
+  background: red;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.contain .lang-card.passive {
+  -webkit-transition: top .2s linear;
+  transition: top .2s linear;
+  -webkit-transition: left .2s linear;
+  transition: left .2s linear;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.contain .lang-card.hover {
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.contain .lang-card.anime {
+  -webkit-animation: cardSwitch1 1s linear;
+          animation: cardSwitch1 1s linear;
+}
+
+.contain .lang-card.new-pos {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  z-index: -3;
+}
+
+.contain .cont-card {
+  position: absolute;
+  width: 10vh;
+  height: 10vh;
+  background: blue;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.contain .cont-card.passive {
+  z-index: -5;
+  top: -10px;
+  left: 10px;
+}
+
+.contain .cont-card.new-pos {
+  -webkit-transition: top .2s linear;
+  transition: top .2s linear;
+  -webkit-transition: left .2s linear;
+  transition: left .2s linear;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+.contain .cont-card.anime {
+  -webkit-animation: cardSwitch2 1s linear;
+          animation: cardSwitch2 1s linear;
+}
+
+.contain .cont-card.hover {
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+@-webkit-keyframes cardSwitch1 {
+  0% {
+  }
+  30% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  50% {
+    z-index: -5;
+  }
+  80% {
+    z-index: -5;
+    -webkit-transform: translate(10px, -20px);
+            transform: translate(10px, -20px);
+  }
+  90% {
+    z-index: -5;
+  }
+  100% {
+    z-index: -5;
+    -webkit-transform: translate(10px, 0px);
+            transform: translate(10px, 0px);
+  }
+}
+
+@keyframes cardSwitch1 {
+  0% {
+  }
+  30% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  50% {
+    z-index: -5;
+  }
+  80% {
+    z-index: -5;
+    -webkit-transform: translate(10px, -20px);
+            transform: translate(10px, -20px);
+  }
+  90% {
+    z-index: -5;
+  }
+  100% {
+    z-index: -5;
+    -webkit-transform: translate(10px, 0px);
+            transform: translate(10px, 0px);
+  }
+}
+
+@-webkit-keyframes cardSwitch2 {
+  0% {
+  }
+  30% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  50% {
+    z-index: -5;
+  }
+  80% {
+    -webkit-transform: translate(10px, -20px);
+            transform: translate(10px, -20px);
+    z-index: -5;
+  }
+  90% {
+    z-index: -6;
+  }
+  100% {
+    -webkit-transform: translate(10px, 0px);
+            transform: translate(10px, 0px);
+    z-index: -5;
+  }
+}
+
+@keyframes cardSwitch2 {
+  0% {
+  }
+  30% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  50% {
+    z-index: -5;
+  }
+  80% {
+    -webkit-transform: translate(10px, -20px);
+            transform: translate(10px, -20px);
+    z-index: -5;
+  }
+  90% {
+    z-index: -6;
+  }
+  100% {
+    -webkit-transform: translate(10px, 0px);
+            transform: translate(10px, 0px);
+    z-index: -5;
+  }
+}
+
+@-webkit-keyframes newpos2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    z-index: 1;
+  }
+  100% {
+    -webkit-transform: translate(-10px, 5px);
+            transform: translate(-10px, 5px);
+  }
+}
+
+@keyframes newpos2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    z-index: 1;
+  }
+  100% {
+    -webkit-transform: translate(-10px, 5px);
+            transform: translate(-10px, 5px);
+  }
+}
+
+@-webkit-keyframes newpos1 {
+  0% {
+  }
+  100% {
+    z-index: 1;
+    -webkit-transform: translate(0px, 5px);
+            transform: translate(0px, 5px);
+  }
+}
+
+@keyframes newpos1 {
+  0% {
+  }
+  100% {
+    z-index: 1;
+    -webkit-transform: translate(0px, 5px);
+            transform: translate(0px, 5px);
+  }
+}
+/*# sourceMappingURL=style.css.map */

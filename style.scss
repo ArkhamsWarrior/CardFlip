@@ -1,0 +1,168 @@
+body{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.contain{
+    position: relative;
+    width:10vh;
+    height:10vh;
+    border:10px;
+.lang-card{
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    background: red;
+    transition: transform 1s ease;
+    &.passive{
+        transition: top .2s linear;
+        transition: left .2s linear;
+        top: 0;
+        left: 0;
+        z-index:1;
+
+    }
+    &.hover{
+        transition: transform 1s ease;
+
+        transform: translateY(-5px);
+    }
+    
+
+    &.anime{
+        
+        animation: cardSwitch1 1s linear;
+    }
+        &.new-pos{
+
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            z-index:-3;
+
+    
+        }
+    }
+    // &.pos-anime{
+    //     animation: newpos1 1s linear;
+    // }
+
+
+
+
+
+
+.cont-card{
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    background: blue;
+    user-select: none;
+    // transition: all .1s linear;
+    // transition: z-index 0.1s linear;
+    // transition: top .5s linear;
+    // transition: left .5s linear;
+    transition: transform 1s ease;
+
+
+    &.passive{
+
+        z-index: -5;
+        top: -10px;
+        left: 10px;
+        
+    }
+    &.new-pos{
+        transition: top .2s linear;
+        transition: left .2s linear;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+    }
+        &.anime{
+        animation: cardSwitch2 1s linear;
+
+    }
+    &.hover{
+        transition: transform 1s ease;
+    
+        transform: translateY(-5px);
+    }
+
+}
+
+
+}
+@keyframes cardSwitch1{
+    0%{
+        
+    }
+    30%{
+        transform: translateY(-20px);
+
+    }
+    50%{
+        z-index:-5;
+    }
+    80%{
+        z-index:-5;
+        transform:translate(10px, -20px);
+        
+
+    }
+    90%{z-index:-5;
+    }
+    100%{z-index:-5;
+        transform: translate(10px,0px);
+    }
+}
+@keyframes cardSwitch2{
+    0%{
+        // transform: translate(0,0);
+    }
+    30%{
+        transform: translateY(-20px);
+    }
+    50%{
+        z-index:-5;
+
+    }
+    80%{
+        transform:translate(10px, -20px);
+        z-index:-5;
+    }
+    90%{
+        z-index:-6;
+    }
+    100%{
+        transform: translate(10px,0px);
+        z-index: -5;
+    }
+}
+
+@keyframes newpos2{
+    0%{
+        transform: translate(0, 0);
+        z-index: 1;
+
+    }
+
+    100%{ 
+        transform: translate(-10px, 5px);
+    }
+}
+
+@keyframes newpos1{
+    0%{
+    }
+
+    100%{
+        z-index: 1;
+        transform: translate(0px, 5px);
+
+    }
+
+}
+
